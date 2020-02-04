@@ -37,7 +37,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/nats-io/jwt"
+	"github.com/nats-io/jwt/v2"
 	"github.com/nats-io/nats.go/util"
 	"github.com/nats-io/nkeys"
 	"github.com/nats-io/nuid"
@@ -2613,7 +2613,7 @@ func (nc *Conn) PublishMsg(m *Msg) error {
 	return nc.publish(m.Subject, m.Reply, m.Data)
 }
 
-// PublishRequest will perform a Publish() excpecting a response on the
+// PublishRequest will perform a Publish() expecting a response on the
 // reply subject. Use Request() for automatically waiting for a response
 // inline.
 func (nc *Conn) PublishRequest(subj, reply string, data []byte) error {
