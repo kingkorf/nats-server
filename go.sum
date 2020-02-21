@@ -18,7 +18,6 @@ github.com/nats-io/jwt v0.3.0/go.mod h1:fRYCDE99xlTsqUzISS1Bi75UBJ6ljOJQOAAu5Vgl
 github.com/nats-io/jwt v0.3.2/go.mod h1:/euKqTS1ZD+zzjYrY7pseZrTtWQSjujC7xjPc8wL6eU=
 github.com/nats-io/jwt v0.3.3-0.20200521183222-e0469408130c h1:t6et6b/4MPZHxP0gtyczC7FeWi0anKl5djK6XdZj2xw=
 github.com/nats-io/jwt v0.3.3-0.20200521183222-e0469408130c/go.mod h1:93OoI9cfJ13Q42aaXp9Ii1H9kXBFdzcC3skMgDTebj4=
-github.com/nats-io/jwt/v2 v2.0.0-20200221225433-79b67ebebe7a h1:BcJyASUf899W9dLWVe3L1vseu9oaUfL3j4wOXXjE0RU=
 github.com/nats-io/jwt/v2 v2.0.0-20200221225433-79b67ebebe7a/go.mod h1:dSGoi+iL72DccF6Ix1HLrYZgn4LqcWKG4f9vpKpKEx4=
 github.com/nats-io/jwt/v2 v2.0.0-20200521183222-e0469408130c h1:MDIzw4NloAjVlumJPDf5nXDjJiRuXs4G3oEGrjiTMT0=
 github.com/nats-io/jwt/v2 v2.0.0-20200521183222-e0469408130c/go.mod h1:W1oHivuMaErpZ6JtZff/QmEhTA4rM+5vYk1i3YOVAII=
