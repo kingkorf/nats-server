@@ -14,6 +14,8 @@ github.com/minio/highwayhash v1.0.0/go.mod h1:xQboMTeM9nY9v/LlAOxFctujiv5+Aq2hR5
 github.com/nats-io/jwt v0.3.2/go.mod h1:/euKqTS1ZD+zzjYrY7pseZrTtWQSjujC7xjPc8wL6eU=
 github.com/nats-io/jwt v0.3.3-0.20200518170309-0a808cf7a94a h1:eKwfOgkBB+0SsV0G2fBrso6r0X4djrmbmdvKXYh6/0o=
 github.com/nats-io/jwt v0.3.3-0.20200518170309-0a808cf7a94a/go.mod h1:n3cvmLfBfnpV4JJRN7lRYCyZnw48ksGsbThGXEk4w9M=
+github.com/nats-io/jwt v0.3.3-0.20200521171258-9d7d475e320a h1:92GPL8nBQqd9bvaseV7G8T7qvufdhKuxo1xi0BGzEos=
+github.com/nats-io/jwt v0.3.3-0.20200521171258-9d7d475e320a/go.mod h1:n3cvmLfBfnpV4JJRN7lRYCyZnw48ksGsbThGXEk4w9M=
 github.com/nats-io/nats.go v1.10.0 h1:L8qnKaofSfNFbXg0C5F71LdjPRnmQwSsA4ukmkt1TvY=
 github.com/nats-io/nats.go v1.10.0/go.mod h1:AjGArbfyR50+afOUotNX2Xs5SYHf+CoOa5HH1eEl2HE=
 github.com/nats-io/nkeys v0.1.3/go.mod h1:xpnFELMwJABBLVhffcfd1MZx6VsNRFpEugbxziKVo7w=
