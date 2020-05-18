@@ -14,10 +14,8 @@
 package server
 
 import (
-	"encoding/json"
 	"fmt"
 	"io/ioutil"
-	"log"
 	"math/rand"
 	"net/http"
 	"net/url"
@@ -67,15 +65,15 @@ type Account struct {
 	js           *jsAccount
 	jsLimits     *JetStreamAccountLimits
 	limits
-	expired       bool
-	signingKeys   []string
-	srv           *Server // server this account is registered with (possibly nil)
-	lds           string  // loop detection subject for leaf nodes
-	siReply       []byte  // service reply prefix, will form wildcard subscription.
-	prand         *rand.Rand
-	eventIds      *nuid.NUID
-	eventIdsMu    sync.Mutex
-	default_perms *Permissions
+	expired      bool
+	signingKeys  []string
+	srv          *Server // server this account is registered with (possibly nil)
+	lds          string  // loop detection subject for leaf nodes
+	siReply      []byte  // service reply prefix, will form wildcard subscription.
+	prand        *rand.Rand
+	eventIds     *nuid.NUID
+	eventIdsMu   sync.Mutex
+	defaultPerms *Permissions
 }
 
 // Account based limits.
@@ -2382,7 +2380,7 @@ func (s *Server) UpdateAccountClaims(a *Account, ac *jwt.AccountClaims) {
 			a.usersRevoked[pk] = t
 		}
 	}
-	a.default_perms = buildPermissionsFromJwt(&ac.DefaultPermissions)
+	a.defaultPerms = buildPermissionsFromJwt(&ac.DefaultPermissions)
 	a.mu.Unlock()
 
 	clients := gatherClients()
@@ -2496,10 +2494,8 @@ func buildInternalNkeyUser(uc *jwt.UserClaims, acc *Account) *NkeyUser {
 
 	// Now check for permissions.
 	var p = buildPermissionsFromJwt(&uc.Permissions)
-	if p == nil && acc.default_perms != nil {
-		json, _ := json.Marshal(*acc.default_perms)
-		log.Printf("apply default_perms %+v to %s\n", string(json), uc.Subject)
-		p = acc.default_perms
+	if p == nil && acc.defaultPerms != nil {
+		p = acc.defaultPerms.clone()
 	}
 	nu.Permissions = p
 	return nu

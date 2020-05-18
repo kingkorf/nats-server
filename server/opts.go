@@ -1839,7 +1839,7 @@ func parseAccounts(v interface{}, opts *Options, errors *[]error, warnings *[]er
 						*errors = append(*errors, err)
 						continue
 					}
-					acc.default_perms = permissions
+					acc.defaultPerms = permissions
 				default:
 					if !tk.IsUsedVariable() {
 						err := &unknownConfigFieldErr{
@@ -1852,7 +1852,7 @@ func parseAccounts(v interface{}, opts *Options, errors *[]error, warnings *[]er
 					}
 				}
 			}
-			applyDefaultPermissions(users, nkeyUsr, acc.default_perms)
+			applyDefaultPermissions(users, nkeyUsr, acc.defaultPerms)
 			for _, u := range nkeyUsr {
 				if _, ok := uorn[u.Nkey]; ok {
 					err := &configErr{tk, fmt.Sprintf("Duplicate nkey %q detected", u.Nkey)}
