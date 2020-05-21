@@ -4,8 +4,8 @@ go 1.14
 
 require (
 	github.com/minio/highwayhash v1.0.0
-	github.com/nats-io/jwt/v2 v2.0.0-20200521183222-e0469408130c
-	github.com/nats-io/nats.go v1.10.1-0.20200521204336-8a425aba6f91
+	github.com/nats-io/jwt/v2 v2.0.0-20200521221319-86d464061599
+	github.com/nats-io/nats.go v1.10.1-0.20200521221723-55b1d59dca23
 	github.com/nats-io/nkeys v0.1.4
 	github.com/nats-io/nuid v1.0.1
 	golang.org/x/crypto v0.0.0-20200323165209-0ec3e9974c59
